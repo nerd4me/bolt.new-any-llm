@@ -4,10 +4,11 @@ export const WORK_DIR_NAME = 'project';
 export const WORK_DIR = `/home/${WORK_DIR_NAME}`;
 export const MODIFICATIONS_TAG_NAME = 'bolt_file_modifications';
 export const MODEL_REGEX = /^\[Model: (.*?)\]\n\n/;
-export const DEFAULT_MODEL = 'claude-3-5-sonnet-20240620';
-export const DEFAULT_PROVIDER = 'Anthropic';
+export const DEFAULT_MODEL = 'anthropic.claude-3-5-sonnet-20240620-v1:0';
+export const DEFAULT_PROVIDER = 'Bedrock';
 
 const staticModels: ModelInfo[] = [
+  { name: 'anthropic.claude-3-5-sonnet-20240620-v1:0', label: 'Claude 3.5 Sonnet - Bedrock', provider: 'Bedrock' },
   { name: 'claude-3-5-sonnet-20240620', label: 'Claude 3.5 Sonnet', provider: 'Anthropic' },
   { name: 'gpt-4o', label: 'GPT-4o', provider: 'OpenAI' },
   { name: 'deepseek/deepseek-coder', label: 'Deepseek-Coder V2 236B (OpenRouter)', provider: 'OpenRouter' },
